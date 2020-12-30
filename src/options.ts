@@ -6,7 +6,7 @@ export const options: IGenOptions = {
     target: ['.proto'],
     ignore: ['node_modules', 'dist'],
     template: 'templates/nestjs-grpc.hbs',
-    keepCase: false,
+    keepCase: true,
     comments: true,
     verbose: true
 };
