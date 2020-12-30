@@ -57,10 +57,12 @@ export interface {{@key}} {
 {{#if comment}}
     {{comment}}
 {{/if}}
-{{#if required}}
+{{#if this.required}}
     {{@key}}: {{type this}};
-{{else}}
-    {{@key}}?: {{type this}};
+{{else if this.repeated}}
+    {{@key}}: {{type this}};
+{{else if this.optional}}
+    {{@key}}: {{type this}} | null;
 {{/if}}
 {{/each}}
 }
